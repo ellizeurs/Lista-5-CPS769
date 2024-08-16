@@ -51,7 +51,7 @@ qa_chain = ConversationalRetrievalChain.from_llm(
 
 # Histórico de mensagens
 messages = [
-    SystemMessage('Você está interagindo com um sistema de recuperação de conhecimento aumentada. Pergunte sobre o conteúdo do PDF ou inicie uma conversa livre.'),
+    SystemMessage(''),
 ]
 
 # Loop de conversação
@@ -75,9 +75,9 @@ while True:
         system_message_content = "Documentos relevantes:"
         for doc in source_docs:
             system_message_content += f"\n- {doc.page_content}"  # Exibe os primeiros 200 caracteres da página relevante
-        messages.append(SystemMessage(content=system_message_content))
-        answer = llm.invoke(messages)
+        #messages.append(SystemMessage(content=system_message_content))
+        #answer = llm.invoke(messages)
 
     # Adicionar a resposta ao histórico
-    print('ChatGPT: ', answer.content)
-    chat_history.append(AIMessage(answer.content))
+    print('ChatGPT: ', answer)
+    chat_history.append(AIMessage(answer))

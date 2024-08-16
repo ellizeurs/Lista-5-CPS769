@@ -7,6 +7,7 @@
 \usepackage{xcolor}
 \usepackage{tikz}
 \usepackage{amsmath}
+\usepackage{hyperref}
 \usetikzlibrary{shapes, arrows, positioning}
 
 \definecolor{codegreen}{rgb}{0,0.6,0}
@@ -56,6 +57,19 @@
   \section*{Lista 5}
 
     \subsection*{Exercício 1}
+    
     O artigo escolhido foi: \textbf{Generating Text with Recurrent Neural Networks}
     
+    O código utilizado para a geração de texto está disponível no GitHub: \\
+    https://github.com/ellizeurs/Lista-5-CPS769
+    
+    \begin{figure}[h]
+      \centering
+      \includegraphics[width=0.8\textwidth]{assets/resposta.png}
+      \caption{Resultado da geração de texto}
+    \end{figure}
+
+    Foi possível responder perguntas gerais sobre o artigo, mas perguntas como autores, data, local de publicação não foram respondidas.
+
+    Encontrei em alguns tutoriais a inserção do texto recuperado direto no contexto, de acordo com a similaridade, mas não consegui calcular a similaridade e parece não ser feito no tutorial da LangChain.
 \end{document}
